@@ -1,0 +1,120 @@
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+.wrapper {
+  display: flex;
+  width: 100%;
+}
+#sidebar {
+  width: 250px;
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 999;
+  background: #3d4349;
+  color: #fff;
+  transition: all 0.3s;
+}
+#sidebar.active {
+  margin-left: -250px;
+}
+
+a[data-toggle="collapse"] {
+  position: relative;
+}
+
+.dropdown-toggle::after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+@media (max-width: 768px) {
+  #sidebar {
+    margin-left: -250px;
+  }
+  #sidebar.active {
+    margin-left: 0;
+  }
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #fafafa;
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1em;
+  font-weight: 300;
+  line-height: 1.7em;
+  color: rgb(156, 151, 151);
+}
+
+a,
+a:hover,
+a:focus {
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+link,
+link:hover,
+link:focus {
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+#sidebar {
+  /* don't forget to add all the previously mentioned styles here too */
+  background: #3d4349;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+#sidebar .sidebar-header {
+  padding: 20px;
+  background: #3d4349;
+}
+
+#sidebar ul.components {
+  padding: 20px 0;
+  border-bottom: 1px solid #273747;
+}
+
+#sidebar ul p {
+  color: #fff;
+  padding: 2px 0px;
+}
+
+#sidebar ul li a {
+  padding: 10px;
+  color: #fff;
+  font-size: 1.1em;
+  display: block;
+}
+#sidebar ul li a:hover {
+  color: #0056b3;
+  background: #273747;
+}
+
+#sidebar ul li.active > a,
+a[aria-expanded="true"] {
+  background: #273747;
+}
+ul ul a {
+  font-size: 0.9em !important;
+  padding-left: 30px !important;
+  background: #273747;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(1, 1, 1, 1);
+  border: 0;
+}
